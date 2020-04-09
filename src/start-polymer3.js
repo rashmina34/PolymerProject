@@ -76,11 +76,13 @@ class StartPolymer3 extends PolymerElement {
 
 
   togglePie() {
+    debugger
     if (this.pie && !this.loadComplete) {
       // See https://developers.google.com/web/updates/2017/11/dynamic-import
-      import('./lazy-element.js').then((LazyElement) => {
+      import('./lazy-element').then((LazyElement) => {
         // `${<p>Hello world</p>}`
-        console.log('Lazy Element Loaded');
+
+        console.log('Lazy Element Loaded', LazyElement);
 
       }).catch((reason) => {
         console.log("LazyElement failed to load", reason);
@@ -150,7 +152,7 @@ class StartPolymer3 extends PolymerElement {
         noink
         checked={{pie}}>Check me to get new component</paper-checkbox>
       <template is="dom-if" if=[[pie]]>
-        <lazy-element><p>lazy Element</p></lazy-element>
+        <lazy-element></lazy-element>
       </template>
       <br/>
 

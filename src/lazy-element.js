@@ -31,20 +31,8 @@ class IconToggle extends PolymerElement {
     // Template getter must return an instance of HTMLTemplateElement.
     // The html helper function makes this easy.
     return html`
-    <style>
-      /* shadow DOM styles go here */
-      span {
-        color: blue;
-      }
-      :host {
-        display: inline-block;
-      }
-    </style>
-
-    <!-- shadow DOM goes here -->
-    <span>Not much here yet.</span>
+   
     <p>Hello</p>
-  
     `;
   }
 }
