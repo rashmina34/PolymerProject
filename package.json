@@ -7,6 +7,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@polymer/app-route": "^3.0.0-pre.20",
+    "@polymer/iron-icon": "^3.0.1",
     "@polymer/iron-image": "^3.0.2",
     "@polymer/iron-pages": "^3.0.1",
     "@polymer/paper-badge": "^3.1.0",
@@ -16,6 +17,7 @@
     "@polymer/paper-icon-button": "^3.0.2",
     "@polymer/paper-input": "^3.2.0",
     "@polymer/paper-radio-button": "^3.0.1",
+    "@polymer/paper-radio-group": "^3.0.1",
     "@polymer/paper-slider": "^3.0.1",
     "@polymer/polymer": "latest",
     "@webcomponents/webcomponentsjs": "latest"

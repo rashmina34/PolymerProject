@@ -15,16 +15,19 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/paper-slider/paper-slider.js';
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-radio-button/paper-radio-button.js';
+import '@polymer/paper-radio-group/paper-radio-group.js';
 import '@polymer/iron-image/iron-image.js';
 
 class AnotherPage extends PolymerElement {
+
+
   static get template() {
     // Template getter must return an instance of HTMLTemplateElement.
     // The html helper function makes this easy.
     return html`
     <style>
     iron-image {
-      width: 8%;
+      width: 40px;
       height: 40px;
       border-radius: 50%
       background-color: lightgray;
@@ -34,10 +37,9 @@ class AnotherPage extends PolymerElement {
       border-radius: 50% !important;
     }
     </style>
-      <h2> Welcome to another page. </h2>
       <iron-image class="image-style" sizing="cover" preload src="http://lorempixel.com/600/400"></iron-image>
-      </br>
-      <h3>Paper slider Example </h3>
+      <h2> Welcome to page1. </h2>
+      <h3>Paper slider Example: slide to increase count </h3>
       <paper-slider value="21" dir="rtl" editable></paper-slider>
       </br>
       <h3>Input Elements of polymer project</h3>
@@ -47,9 +49,11 @@ class AnotherPage extends PolymerElement {
       <paper-textarea label="autoresizing textarea input"></paper-textarea>
       <paper-input label="password input" type="password"></paper-input>
       <p>Gender</p>
-      <paper-radio-button>Male</paper-radio-button>
-      <paper-radio-button checked>Female</paper-radio-button>
-      <paper-radio-button>Other</paper-radio-button>
+      <paper-radio-group attr-for-selected="value">
+      <paper-radio-button value="male" name="gender">Male</paper-radio-button>
+      <paper-radio-button value="female" name="gender">Female</paper-radio-button>
+      <paper-radio-button value="other" name="gender">Other</paper-radio-button>
+      </paper-radio-group>
 
     `;
   }

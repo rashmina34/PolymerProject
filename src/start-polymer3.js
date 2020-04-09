@@ -62,7 +62,7 @@ class StartPolymer3 extends PolymerElement {
     // Open your browser's developer tools to view the output.
     console.log(this.tagName);
     this.$.omgpie.focus();
-    if (window.location.pathname === '/') {
+    if (window.location.pathname === ('/')) {
       this.selected = 0;
 
     } else if (window.location.pathname === '/page1') {
@@ -79,7 +79,9 @@ class StartPolymer3 extends PolymerElement {
     if (this.pie && !this.loadComplete) {
       // See https://developers.google.com/web/updates/2017/11/dynamic-import
       import('./lazy-element.js').then((LazyElement) => {
-        console.log("LazyElement loaded");
+        // `${<p>Hello world</p>}`
+        console.log('Lazy Element Loaded');
+
       }).catch((reason) => {
         console.log("LazyElement failed to load", reason);
       });
@@ -148,7 +150,7 @@ class StartPolymer3 extends PolymerElement {
         noink
         checked={{pie}}>Check me to get new component</paper-checkbox>
       <template is="dom-if" if=[[pie]]>
-        <lazy-element><p>lazy loading...</p></lazy-element>
+        <lazy-element><p>lazy Element</p></lazy-element>
       </template>
       <br/>
 
@@ -163,7 +165,7 @@ class StartPolymer3 extends PolymerElement {
 </paper-card>
           </div>
 
-    <div>Welcom to Page 1 <another-page></another-page></div>
+    <div><another-page></another-page></div>
     
     <div class="not_found">Page Not Found</div>
    

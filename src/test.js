@@ -69,7 +69,7 @@ class MyLogin extends PolymerElement {
 
     submitLogin(e) {
         var form = this.shadowRoot.querySelector('#loginUserForm');
-        this.shadowRoot.querySelector('#innerLoginUserForm').action = 'http://localhost:8080/PolymerJavaBackend/rest/login'
+        this.shadowRoot.querySelector('#innerLoginUserForm').action = 'http://localhost:8080/Polymer NodeBackend/rest/login'
         form.submit();
     }
 
