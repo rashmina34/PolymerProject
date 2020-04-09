@@ -6,5 +6,3 @@ Shrawan Lakhey
 Dinesh Lamsal
 
 
-Documentation is done inside documentation folder.
-
